@@ -1,0 +1,221 @@
+/* GLOBALS AND VARIABLES */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --white: hsl(0, 0%, 100%);
+  --stone-100: hsl(30, 54%, 90%);
+  --stone-150: hsl(30, 18%, 87%);
+  --stone-600: hsl(30, 10%, 34%);
+  --stone-900: hsl(24, 5%, 18%);
+
+  --brown-800: hsl(14, 45%, 36%);
+
+  --rose-800: hsl(332, 51%, 32%);
+  --rose-50: hsl(330, 100%, 98%);
+
+  --spacing-100: 8px;
+  --spacing-150: 12px;
+  --spacing-200: 16px;
+  --spacing-300: 24px;
+  --spacing-400: 32px;
+  --spacing-500: 40px;
+  --spacing-600: 48px;
+  --spacing-1600: 128px;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+.text-preset1 {
+  font-family: 'Young serif', sans-serif;
+  font-size: 40px;
+  line-height: 1;
+  letter-spacing: 0;
+  font-weight: 400;
+}
+
+.text-preset2 {
+  font-family: 'Young serif', sans-serif;
+  font-size: 28px;
+  line-height: 1;
+  letter-spacing: 0;
+  font-weight: 400;
+}
+
+.text-preset3 {
+  font-family: 'Outfit', sans-serif;
+  font-size: 20px;
+  line-height: 1;
+  letter-spacing: 0;
+  font-weight: 600;
+}
+
+.text-preset4 {
+  font-family: 'Outfit', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0;
+  font-weight: 400;
+}
+
+.text-preset4-bold {
+  font-family: 'Outfit', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0;
+  font-weight: 700;
+}
+
+/* APP CSS */
+
+span {
+  font-weight: 700;
+}
+
+li {
+  text-indent: var(--spacing-150);
+}
+
+body {
+  background: var(--stone-100);
+}
+
+main {
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: var(--spacing-600);
+}
+
+.card {
+  width: 736px;
+  padding: var(--spacing-500);
+  background-color: var(--white);
+  border-radius: 24px;
+}
+
+.image-wrapper {
+  margin-bottom: var(--spacing-500);
+}
+
+.text-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-400);
+}
+
+.title-heading {
+  margin-bottom: var(--spacing-300);
+}
+
+.sub-heading {
+  color: var(--brown-800);
+  margin-bottom: var(--spacing-300);
+}
+
+.title-text {
+  color: var(--stone-600);
+}
+
+.preparation-wrapper {
+  padding: var(--spacing-300);
+  background: var(--rose-50);
+}
+
+.preparation-wrapper > ul {
+  padding-left: var(--spacing-300);
+}
+
+.preparation-heading {
+  color: var(--rose-800);
+  margin-bottom: var(--spacing-200);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-100);
+  color: var(--stone-600);
+}
+
+.list li::marker {
+  color: var(--brown-800);
+  font-weight: 700;
+}
+
+.ingredients-list,
+.instructions-list {
+  padding-left: var(--spacing-300);
+}
+
+.divider-section {
+  height: 2px;
+  width: 100%;
+  background: var(--stone-150);
+}
+
+.nutrition-wrapper {
+  color: var(--stone-600);
+}
+
+.text-nutrition {
+  margin-bottom: var(--spacing-150);
+}
+
+.table {
+}
+
+.table-row {
+  display: flex;
+  border-bottom: 2px solid var(--stone-150);
+  padding-top: var(--spacing-150);
+  padding-bottom: var(--spacing-150);
+}
+
+.table-row:last-of-type {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.table-row p {
+  flex: 1;
+  padding: 0 var(--spacing-400);
+}
+
+.table-row p:last-of-type {
+  font-weight: 900;
+  color: var(--brown-800);
+}
+
+@media (max-width: 850px) {
+  .card {
+    width: 616px;
+  }
+}
+
+@media (max-width: 450px) {
+  main {
+    padding-top: 0;
+  }
+
+  .card {
+    width: 100%;
+    padding: 0;
+  }
+
+  .text-wrapper {
+    padding: var(--spacing-500) var(--spacing-400);
+  }
+}
